@@ -187,7 +187,6 @@ public class DSLHelper : MonoBehaviour
 
     public static string[] GetFunctionExpressions(string function)
     {
-        print(function);
         // If the function doesn't have brackets {}, then assume it's a single expression
         int startingBracket = function.IndexOf('{');
         if (startingBracket == -1)

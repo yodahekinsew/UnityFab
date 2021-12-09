@@ -262,7 +262,6 @@ public class VariableParser : MonoBehaviour
     public bool EvaluateFunction(string function, ref Variables functionVariables)
     {
         string functionName = DSLHelper.GetFunctionName(function);
-        print("Evaluating function " + functionName);
         string functionParameters = DSLHelper.GetFunctionParameters(function);
         if (DSLHelper.RigidbodyNames.Contains(functionName))
         {
