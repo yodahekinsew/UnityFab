@@ -6,7 +6,7 @@ public class LinkToGithub : MonoBehaviour
     public void OpenLink()
     {
 #if !UNITY_EDITOR
-        openWindow("http://unity3d.com");
+        openWindow("https://github.com/yodahekinsew/UnityFab");
 #endif
     }
 
