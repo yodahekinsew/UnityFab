@@ -1,4 +1,6 @@
 # UnityFab
+My final project for 6.839 Advanced Computer Graphics - A DSL for rigid-body systems built using the Unity Engine.
+
 ## How To Use
 1. You can access UnityFab by going to the [website](https://www.yodahe.com/UnityFab/). 
 2. You can also clone the website branch of this repo to run the website locally.
