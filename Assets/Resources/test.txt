@@ -1,0 +1,115 @@
+# light(
+#     type = point,
+#     intensity = 1,
+# );
+
+# sphere(
+#     mass = 50,
+#     bounce = 1,
+#     position=[0,5,0],
+#     color = red);
+# sphere(
+#     mass = 10,
+#     bounce = 1,
+#     position=[0,10,0],
+#     color = blue);
+# sphere(
+#     mass = 10,
+#     bounce = 1,
+#     position=[0,15, 0],
+#     color = green);
+
+# sphere(
+#     position = [1 1 1],
+#     scale = [2 1 1]);
+
+# capsule(
+#     position = [0 0 0],
+#     color = blue
+# );
+
+# cylinder(
+#     position = [-5 -5 -5],
+#     scale = [.5 2 2],
+#     color = red,
+#     rotation = [90 0 0]
+# );
+
+stacked_boxes(pos = [0 0 0], d = 5);
+stacked_boxes(pos = [5 5 0], d = 10);
+# stacked_boxes(pos = [-5 -2 0], d = 1);
+
+module stacked_boxes(vector pos, float d) {
+    cube(position = pos, color = blue, bounce = 1);
+    cube(position = pos + (d * [0, 1, 0]), color = red, bounce = 1);
+    cube(position = pos + (d * [0, 2, 0]), color = green, bounce = 1);
+};
+
+
+# STACKED PYRAMID OF BOXES
+pyramid_of_boxes(pos = [5, 0, 0], h = 2);
+
+module pyramid_of_boxes(vector3 pos, float h) {
+    for (height=[0:h:1]) {
+        for (col=[height-h:h-height:1]) {
+            for (row=[height-h:h-height:1]) {
+                cube_pos = [row height col];
+                cube(
+                    position = cube_pos,
+                    color = [.6 .6 .8]
+                );
+            };
+        };
+    };
+};
+
+
+# RAMPS OF DIFFERENT HEIGHTS
+cube(locked = true, color = blue, scale = [100 1 100]);
+
+module ball_on_hill(float originX, float height) {
+  	if (height < 0) height = 0;
+    sphere(position = [originX height+1 9.5]);
+    wedge(locked = true, color = red, scale=[5 height 10], pos=[originX height/2+.5 5]);
+};
+
+ball_on_hill(originX = -10, height = 1);
+ball_on_hill(originX = -5, height = 2);
+ball_on_hill(originX = 0, height = 3);
+ball_on_hill(originX = 5, height = 4);
+ball_on_hill(originX = 10, height = 5);
+
+# module line_of_boxes(vector3 origin, Vector3 dir, float length, bool skip) {
+#     for (d=[0:length:1]) {
+#         if (skip && d%2 == 0) {
+#             cube_pos = origin + (d * dir);
+#             cube(position = cube_pos, color = [d/length .5 .5], bounce = d/length, force = 10 * up);
+#         }
+#     }
+# };
+
+# line_of_boxes(origin = [-10 0 0], dir = [1 0 0], length=20, skip=true);
+
+# func sinusoidal_height() {
+#     return [0 sin(t) 0];
+# };
+
+# cube(pos = [0 5 5], color = .5 * [0 sin(t)+5 5] + [0 .5 0]);
+cube(pos=[2.5*sin(pi*t)+5,2.5*sin(tau*t)+2.5,0], color = [.5*sin(pi*t)+.5 .5*sin(tau*t)+.5 0]);
+
+# force hover() {
+#     return [0, sin(t) * 5, 3];
+# };
+    
+# plane();
+
+
+# TODO Implement the following
+
+# union
+# difference
+# intersection
+
+# plane();
+
+# lock prefix for rigidbodies;
