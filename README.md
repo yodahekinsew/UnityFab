@@ -22,10 +22,10 @@ Rigidbodies make up the primitives of UnityFab, and are the functions you can us
       locked = bool                   // Locks the rigidbody's position and rotation, so they will not be affected by the scene
     );
 #### Supported Rigid-bodies Functions
-*     Cube(...);
-*     Sphere(...);
-*     Pyramid(...);
-*     Cylinder(...);
-*     Cone(...);
-*     Wedge(...);
-*     Plane(...);                     // Note: Planes are locked by default
+    Cube(...);
+    Sphere(...);
+    Pyramid(...);
+    Cylinder(...);
+    Cone(...);
+    Wedge(...);
+    Plane(...);                       // Note: Planes are locked by default
