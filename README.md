@@ -3,8 +3,8 @@ My final project for 6.839 (Advanced Computer Graphics) - A DSL for rigid-body s
 
 ## How To Use
 1. You can access UnityFab by going to the [website](https://www.yodahe.com/UnityFab/). 
-2. You can also clone the website branch of this repo to run the website locally.
-3. You can finally clone the main branch of this repo and open the project using Unity Hub in order to access the project locally.
+2. You can also clone the website branch of this [repo](https://github.com/yodahekinsew/UnityFab/) to run the website locally.
+3. You can finally clone the main branch of this [repo](https://github.com/yodahekinsew/UnityFab/) and open the project using Unity Hub in order to access the project locally.
 
 ## Code Syntax
 The syntax for UnityFab is pretty simple, there are just a few concepts you need to know.
